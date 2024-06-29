@@ -1,0 +1,487 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.master.cs" Inherits="PRDG11EOSV03WB.SiteMaster" %>
+
+<!DOCTYPE html>
+<html>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript" src="Scripts/AutoLogout.js"></script>    
+     <script src="Scripts/script001.js" type="text/javascript"></script>    
+ <script type="text/javascript">
+     var warningTimer;
+
+     function startSessionTimeoutWarning() {
+         // Set the timeout duration (in milliseconds) - 3 minutes
+         var timeoutDuration = 50 * 60 * 1000;
+
+         // Set the warning time (in milliseconds) - 2 minutes
+         var warningTime = timeoutDuration - (10 * 60 * 1000);
+
+         // Start the warning timer
+         warningTimer = setTimeout(function () {
+             // Display a warning message
+             if (confirm("Your session will expire in 10 minutes. Do you want to continue?")) {
+                 // If user clicks OK, restart the session timeout
+                 clearTimeout(warningTimer);
+                 startSessionTimeoutWarning();
+             } else {
+                 // If user clicks Cancel, logout
+                 window.location.href = 'Login.aspx?LogMsg=Y';
+             }
+         }, warningTime);
+
+         // Start a timer for auto logout after 3 minutes
+         setTimeout(function () {
+             // Logout automatically
+             window.location.href = 'Login.aspx?LogMsg=SESSIONLOGOUT';
+         }, timeoutDuration);
+     }
+
+     // Call the function when the page is loaded
+     window.onload = function () {
+         startSessionTimeoutWarning();
+     };
+
+     function logoutUser() {
+         //alert("User logged out due to inactivity");
+         window.location = "Login.aspx?LogMsg=SESSIONLOGOUT"
+     }
+ </script>
+
+
+<head runat="server">
+   
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>G11 ADMIN PORTAL</title>
+    <!-- Tell the browser to be responsive to screen width -->
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
+
+    <link href="bower_components/css/gridview.min.css" rel="stylesheet" />
+    <link href="bower_components/css/theme.min.css" rel="stylesheet" />
+
+    <!-- Bootstrap 3.3.7 -->
+    <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css?v=1.0" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="bower_components/font-awesome/css/font-awesome.min.css" />
+    <!-- Ionicons -->
+    <link rel="stylesheet" href="bower_components/Ionicons/css/ionicons.min.css" />
+    <!-- Theme style -->
+
+    <link rel="stylesheet" href="dist/css/AdminLTE.min.css" />
+
+    <!-- AdminLTE Skins. Choose a skin from the css/skins
+       folder instead of downloading all of them to reduce the load. -->
+    <link rel="stylesheet" href="dist/css/skins/_all-skins.min.css?v=2.0" />
+
+    <link rel="apple-touch-icon" href="images/Storage_Warehouse.png" />
+    <link rel="shortcut icon" href="images/Storage_Warehouse.png" />
+
+    <style>
+        /*Calendar Control CSS*/
+        .cal_Theme1 .ajax__calendar_container {
+            background-color: #DEF1F4;
+            border: solid 1px #77D5F7;
+            width: 100%;
+            word-wrap: normal;
+        }
+
+        .cal_Theme1 .ajax__calendar_header {
+            background-color: #ffffff;
+            margin-bottom: 4px;
+        }
+
+        .cal_Theme1 .ajax__calendar_title,
+        .cal_Theme1 .ajax__calendar_next,
+        .cal_Theme1 .ajax__calendar_prev {
+            color: #004080;
+            padding-top: 3px;
+        }
+
+        .cal_Theme1 .ajax__calendar_body {
+            background-color: #ffffff;
+            border: solid 1px #77D5F7;
+        }
+
+        .cal_Theme1 .ajax__calendar_dayname {
+            text-align: center;
+            font-weight: bold;
+            margin-bottom: 4px;
+            margin-top: 2px;
+            color: #004080;
+        }
+
+        .cal_Theme1 .ajax__calendar_day {
+            color: #004080;
+            text-align: center;
+        }
+
+        .cal_Theme1 .ajax__calendar_hover .ajax__calendar_day,
+        .cal_Theme1 .ajax__calendar_hover .ajax__calendar_month,
+        .cal_Theme1 .ajax__calendar_hover .ajax__calendar_year,
+        .cal_Theme1 .ajax__calendar_active {
+            color: #004080;
+            font-weight: bold;
+            background-color: #DEF1F4;
+        }
+
+        .cal_Theme1 .ajax__calendar_today {
+            font-weight: bold;
+            padding-top: 0px;
+        }
+
+        .cal_Theme1 .ajax__calendar_other,
+        .cal_Theme1 .ajax__calendar_hover .ajax__calendar_today,
+        .cal_Theme1 .ajax__calendar_hover .ajax__calendar_title {
+            color: #bbbbbb;
+        }
+
+        /*.modal-panel {
+            display: none;  //30042019
+            overflow: auto;
+        }*/
+
+        .center {
+            z-index: 100;
+            margin: 300px auto;
+            padding: 10px;
+            width: 130px;
+            color: blue;
+            border-radius: 10px;
+        }
+
+        .mob {
+            position: fixed !important;
+            z-index: 2000 !important;
+            height: 100% !important;
+            width: 100% !important;
+            top: 0 !important;
+            background: rgba(255,255,255,.7);
+            filter: alpha(opacity=60);
+            opacity: 0.5;
+        }
+        .p {
+           font-size: medium;
+           font-weight:bold;
+         }
+        .box-primary.box-solid.box > .box-header {
+            color: #fff;
+            background: #1ca5b8;
+            background-color: #1ca5b8;
+        }
+        @media only screen and (max-width: 600px) {
+            #hdrPageTitle {
+                margin-top: 40px;
+            }
+        }
+    </style>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+
+    </asp:ContentPlaceHolder>
+</head>
+<body class="hold-transition skin-blue sidebar-mini">
+    <form id="form1" runat="server" autocomplete="off">
+        <asp:ScriptManager ID="scm" runat="server" EnablePageMethods="true"></asp:ScriptManager>
+
+
+        <asp:UpdateProgress ID="up" runat="server" AssociatedUpdatePanelID="uPnl">
+            <ProgressTemplate>
+                <div class="mob">
+                    <div class="center">
+                        <img src="images/Loader_3.gif" alt="Loading..." width="70" />
+                    </div>
+                </div>
+            </ProgressTemplate>
+        </asp:UpdateProgress>
+        <asp:UpdatePanel ID="uPnl" runat="server" UpdateMode="Conditional">
+            <ContentTemplate>
+                <div class="wrapper" style="height: auto; min-height: 200%;">
+                    <div id="myModal" class="modal fade">
+                        <div class="modal-dialog">
+                            <div class="modal-content">
+                                <div class="modal-header" style="text-align: center; color: black;">
+                                    <h3 id="contactModalhd">Change Password</h3>
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <asp:UpdatePanel ID="upnlChpas" runat="server">
+                                    <ContentTemplate>
+
+                                        <div class="modal-body">
+                                            <div class="box-body">
+                                                <div class="row">
+                                                    <div class="box-body">
+                                                        <div class="form">
+                                                            <br />
+                                                            <div class="row">
+                                                                <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                        <div class="form-group">
+                                                                            <div class="col-sm-4 col-lg-4">
+                                                                                <label class="control-label">Old Password:</label>
+                                                                            </div>
+                                                                            <div class="col-sm-8 col-lg-8">
+                                                                                <asp:TextBox ID="txtOldPassword" runat="server" MaxLength="16" TextMode="Password" Width="80%" CssClass="form-control"></asp:TextBox>
+                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" SetFocusOnError="true" ControlToValidate="txtOldPassword" ErrorMessage="Old Password" ValidationGroup="SaveValidate">*</asp:RequiredFieldValidator>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                        <div class="form-group">
+                                                                            <div class="col-sm-4 col-lg-4">
+                                                                                <label class="control-label">
+                                                                                    New Password:
+                                                                                </label>
+                                                                            </div>
+                                                                            <div class="col-sm-8 col-lg-8">
+                                                                                <asp:TextBox ID="txtNewPassword" runat="server" MaxLength="16" TextMode="Password" Width="80%" CssClass="form-control"></asp:TextBox>
+                                                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" SetFocusOnError="true" ControlToValidate="txtNewPassword" ErrorMessage="New Password" ValidationGroup="SaveValidate">*</asp:RequiredFieldValidator>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+
+                                                                    <div class="col-xs-12 col-sm-12 col-md-12">
+                                                                        <div class="form-group">
+                                                                            <div class="col-sm-4 col-lg-4">
+                                                                                <label class="control-label">Confirm Password:</label>
+                                                                            </div>
+                                                                            <div class="col-sm-8 col-lg-8">
+                                                                                <asp:TextBox ID="txtConfirmPassword" runat="server" MaxLength="16" TextMode="Password" Width="80%" CssClass="form-control"></asp:TextBox>
+                                                                                <asp:CompareValidator ID="CompareValidator1"
+                                                                                    runat="server"
+                                                                                    ControlToCompare="txtNewPassword"
+                                                                                    ControlToValidate="txtConfirmPassword"
+                                                                                    ErrorMessage="Your passwords do not match up!"
+                                                                                    Display="Dynamic" />
+
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="box-footer" style="text-align: center">
+                                                        <asp:Button ID="btnChangePassword" runat="server" Text="Change Password" CssClass="btn btn-primary" OnClick="btnChangePassword_Click" ValidationGroup="SaveValidate" />
+
+                                                        <button class="btn btn-primary" data-dismiss="modal" aria-hidden="true">Cancel</button>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </ContentTemplate>
+                                    <Triggers>
+                                        <asp:AsyncPostBackTrigger ControlID="btnChangePassword" EventName="Click" />
+                                    </Triggers>
+                                </asp:UpdatePanel>
+                            </div>
+                            <!-- /.modal-content -->
+                        </div>
+                        <!-- /.modal-dialog -->
+                    </div>
+                    <!-- /.modal -->
+                    <header class="main-header">
+                        <!-- Logo -->
+                        <a href="#" class="logo">
+                            <!-- mini logo for sidebar mini 50x50 pixels -->
+                            <span class="logo-mini">G11EIS</span>
+                            <!-- logo for regular state and mobile devices -->
+                            <span class="p" >G11&nbsp;ADMIN&nbsp;PORTAL</span>
+                        </a>
+
+                        <!-- Header Navbar: style can be found in header.less -->
+                        <nav class="navbar navbar-static-top">
+                            <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
+                                <span class="sr-only">Toggle navigation</span>
+                            </a>
+                            <!-- Navbar Right Menu -->
+                            <div class="navbar-custom-menu">
+                                <ul class="nav navbar-nav">
+                                    <!-- Messages: style can be found in dropdown.less-->
+                                    <!-- User Account: style can be found in dropdown.less -->
+                                    <li class="dropdown notifications-menu">
+                                        <asp:UpdatePanel ID="UpdatePanel1" runat="server">
+                                            <ContentTemplate>
+                                             
+                                            </ContentTemplate>
+                                        </asp:UpdatePanel>
+                                    </li>
+
+                                    <li class="dropdown user user-menu">
+                                        <a href="OrderList.aspx" class="dropdown-toggle" data-toggle="dropdown">
+                                            <img src="dist/img/icons8-user-80.png" class="user-image" alt="User Image">
+                                            <span id="spnUserName" runat="server"></span>
+                                        </a>
+                                       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ul class="dropdown-menu">
+                                            <!-- User image -->
+                                            <li class="user-header">
+                                                <img src="dist/img/icons8-user-80.png" class="img-circle" alt="User Image">
+                                                <p>
+                                                    <span id="spnUsrName" runat="server"></span>
+                                                </p>
+                                            </li>
+                                            <li class="user-footer">
+                                                <div class="pull-left">
+                                                   <%--<asp:LinkButton ID="LogoutButton" runat="server" CssClass="btn btn-default btn-flat" OnClick="lnkbtnlogout_Click">Logout</asp:LinkButton>--%>
+                                                      
+                                                    <a href="Login.aspx?LogMsg=Y" class="btn btn-default btn-flat">Logout</a>
+                                               
+                                                </div>
+                                                <div class="pull-right">
+                                                    <asp:LinkButton ID="lnkChangePassword" runat="server" Style="padding: 6px; margin-top: 0px;" OnClientClick="Changepassword(); return false;" class="btn btn-default btn-flat">Change Password</asp:LinkButton>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </div>
+                        </nav>
+                    </header>
+                    <!-- Left side column. contains the logo and sidebar -->
+                    <aside class="main-sidebar">
+                        <!-- sidebar: style can be found in sidebar.less -->
+                        <section class="sidebar">
+                            <!-- Sidebar user panel -->
+                         <div class="user-panel">
+                                <div class="pull-left image">
+                                    <a href="" class="logo">
+                                        <img src="images/GurusoftLogo.gif" alt="User Image" style="width: 160px;">
+                                    </a>
+                                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+                            </div>
+                            <!-- sidebar menu: : style can be found in sidebar.less --  sitemaster slides 111-->
+                            <ul class="sidebar-menu" data-widget="tree" id="list" runat="server">
+                                <li class="treeview" id="Li1" runat="server" hidden>
+                                    <a href="#">
+                                        <i ></i><span>Reports</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-right pull-right"></i>
+                                        </span>
+                                    </a>
+                                     <ul class="treeview-menu">
+                                        <li>&nbsp;</li>
+                                         <li><a href="InventorySummaryReport.aspx">Inventory Summary</a></li>
+                                        <li>&nbsp;</li>
+                                         <li><a href="StockMovementDetails.aspx">Stock Movement Details</a></li>
+                                        <li>&nbsp;</li>
+                                    </ul>
+                             
+                                </li>                              
+                                <li class="treeview" id="User" runat="server">
+                                    <a href="#">
+                                        <i class="fa fa-users"></i><span>Admin</span>
+                                        <span class="pull-right-container">
+                                            <i class="fa fa-angle-right pull-right"></i>
+                                        </span>
+                                    </a>
+                                 <ul class="treeview-menu">
+                                        <li>&nbsp;</li>
+                                          <li><a href="#">
+                                            <asp:LinkButton ID="lnkbtnusercreation" runat="server" Text="User Creation" OnClick="lnkbtnusercreation_Click"></asp:LinkButton></a>
+                                          </li>
+                                        <li>&nbsp;</li>
+                                       <li><a href="UserHistory.aspx">User Summary</a></li>
+                                               
+                                    </ul>
+                                </li> 
+                                <li runat="server"><a href="Login.aspx?LogMsg=Y"><span>Logout</span></a></li>
+                                <%--<li runat="server"><asp:LinkButton ID="lnkbtnlogout" runat="server" OnClick="lnkbtnlogout_Click"><span>Logout</span></asp:LinkButton></li>--%>
+
+                            </ul>
+                        </section>
+                        <!-- /.sidebar -->
+                    </aside>
+                    <div class="content-wrapper">
+                        <!-- Content Header (Page header) -->
+                        <asp:UpdatePanel ID="updt" runat="server">
+                            <Triggers>
+                                <asp:PostBackTrigger ControlID="lnkChangePassword" />
+                            </Triggers>
+                            <ContentTemplate>
+                                <section class="content-header">
+                                    <h1 style="text-align: right">
+                                        <h1 style="text-align: center; color: black;" id="hdrPageTitle" runat="server"></h1>
+                                </section>
+
+                                <div hidden>
+                                    <asp:TextBox runat="server" ID="txtByteArray"></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="txtFilename"></asp:TextBox>
+                                    <asp:TextBox runat="server" ID="txtExtension"></asp:TextBox>
+                                </div>
+                                <%--New code(ends)--%>
+                            </ContentTemplate>
+                        </asp:UpdatePanel>
+                        <!-- Main content -->
+                        <section class="content">
+                            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </section>
+                    </div>
+                    <footer class="main-footer">
+                        <div class="pull-right hidden-xs">
+                        </div>
+                        <strong>Copyright &copy; 2025 <a href="http://www.gurusoft.com.sg" style="color: red">Gurusoft</a>.</strong> All rights reserved.
+                    </footer>
+                </div>
+
+            </ContentTemplate>
+        </asp:UpdatePanel>
+        <!-- jQuery 3 -->
+        <script src="bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+        <!-- Popper-->
+        <script src="bower_components/bootstrap/dist/js/Bootbox/popper.min.js" type="text/javascript"></script>
+        <!-- Bootstrap 3.3.7 -->
+        <script src="bower_components/bootstrap/dist/js/bootstrap.min.js" type="text/javascript"></script>
+        <!-- Bootbox-->
+        <script src="bower_components/bootstrap/dist/js/Bootbox/bootbox.min.js" type="text/javascript"></script>
+
+        <!-- AdminLTE App -->
+        <script src="dist/js/adminlte.min.js" type="text/javascript"></script>
+        <script src="bower_components/ckeditor/ckeditor.js"></script>
+        
+        <script>
+            function Changepassword() {
+                $('#myModal').modal("show");
+            }
+            function CloseModal() {
+                $('#myModal').modal("hide");
+            }
+
+        </script>
+        
+
+         <%--  For loader enable during report download--%>
+        <script>
+            function initiateDownload() {
+                const txtByteArray = document.getElementById("txtByteArray").value
+                const txtFilename = document.getElementById("txtFilename").value
+                const txtExtension = document.getElementById("txtExtension").value
+
+                var datetime = new Date()
+                var stringDownloadFilename = txtFilename + " - " + datetime.toISOString() + "." + txtExtension
+                if (txtByteArray.length > 0) {
+                    const byteArray = new Uint8Array(atob(txtByteArray).split('').map(char => char.charCodeAt(0)))
+                    const blob = new Blob([byteArray], { type: 'application/octet-stream' })
+
+                    const link = document.createElement('a')
+                    link.href = window.URL.createObjectURL(blob)
+
+                    link.download = stringDownloadFilename
+                    link.click()
+                }
+                else {
+                    alert("Byte array string is empty")
+                }
+            }
+            function showLoader() {
+                const loader = document.getElementById("up");
+                if (loader.style.display != "block") {
+                    loader.style.display = "block"
+                }
+            }
+        </script>
+        <%--New code   (ends)--%>
+    </form>
+
+</body>
+</html>

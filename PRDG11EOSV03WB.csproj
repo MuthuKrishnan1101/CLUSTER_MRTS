@@ -1,0 +1,1542 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{993EF25C-E779-4078-8BE0-788FCF32B6EB}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>PRDG11EOSV03WB</RootNamespace>
+    <AssemblyName>PRDG11EOSV03WB</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort>53999</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication>enabled</IISExpressAnonymousAuthentication>
+    <IISExpressWindowsAuthentication>disabled</IISExpressWindowsAuthentication>
+    <IISExpressUseClassicPipelineMode>false</IISExpressUseClassicPipelineMode>
+    <TargetFrameworkProfile />
+    <Use64BitIISExpress />
+    <UseGlobalApplicationHostFile />
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AjaxControlToolkit">
+      <HintPath>..\..\..\GS_TFS\R1V1_V001\DLL\AjaxControlToolkit.dll</HintPath>
+    </Reference>
+    <Reference Include="G10CertificateValidation">
+      <HintPath>C:\Users\GSIAD-026\Downloads\G10CertificateValidation.dll</HintPath>
+    </Reference>
+    <Reference Include="G11EOSMW.EncyptionManager">
+      <HintPath>C:\Users\GSIAD-026\Downloads\G11EOSMW.EncyptionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="GSEncyptionManager">
+      <HintPath>..\..\..\GS_TFS\R1V1_V001\DLL\GSEncyptionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="Gurusoft.ExceptionManager">
+      <HintPath>..\..\..\GS_TFS\R1V1_V001\DLL\Gurusoft.ExceptionManager.dll</HintPath>
+    </Reference>
+    <Reference Include="HtmlAgilityPack">
+      <HintPath>..\..\..\..\..\CGH\CGH-MRIS\G11CCES\SGH-CCES\bin\HtmlAgilityPack.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="Microsoft.ScriptManager.WebForms, Version=4.5.6.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35">
+      <HintPath>..\packages\Microsoft.AspNet.ScriptManager.WebForms.4.5.6\lib\net45\Microsoft.ScriptManager.WebForms.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=5.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="bower_components\bootstrap\animsition\animsition.min.css" />
+    <Content Include="bower_components\bootstrap\animsition\animsition.min.js" />
+    <Content Include="bower_components\bootstrap\bootstrap-progressbar\bootstrap-progressbar-3.3.4.min.css" />
+    <Content Include="bower_components\bootstrap\bootstrap-progressbar\bootstrap-progressbar.min.js" />
+    <Content Include="bower_components\bootstrap\circle-progress\circle-progress.js" />
+    <Content Include="bower_components\bootstrap\circle-progress\circle-progress.min.js" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.min.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.min.css" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bower_components\bootstrap\dist\js\Bootbox\bootbox.min.js" />
+    <Content Include="bower_components\bootstrap\dist\js\Bootbox\popper.min.js" />
+    <Content Include="bower_components\bootstrap\dist\js\bootstrap.js" />
+    <Content Include="bower_components\bootstrap\dist\js\bootstrap.min.js" />
+    <Content Include="bower_components\bootstrap\dist\js\npm.js" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="bower_components\bootstrap\Gruntfile.js" />
+    <Content Include="bower_components\bootstrap\grunt\browsers.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-commonjs-generator.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-glyphicons-data-generator.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-lessdoc-parser.js" />
+    <Content Include="bower_components\bootstrap\grunt\bs-raw-files-generator.js" />
+    <Content Include="bower_components\bootstrap\grunt\change-version.js" />
+    <Content Include="bower_components\bootstrap\grunt\generate-sri.js" />
+    <Content Include="bower_components\bootstrap\grunt\karma.conf.js" />
+    <Content Include="bower_components\bootstrap\js\affix.js" />
+    <Content Include="bower_components\bootstrap\js\alert.js" />
+    <Content Include="bower_components\bootstrap\js\button.js" />
+    <Content Include="bower_components\bootstrap\js\carousel.js" />
+    <Content Include="bower_components\bootstrap\js\collapse.js" />
+    <Content Include="bower_components\bootstrap\js\dropdown.js" />
+    <Content Include="bower_components\bootstrap\js\modal.js" />
+    <Content Include="bower_components\bootstrap\js\popover.js" />
+    <Content Include="bower_components\bootstrap\js\scrollspy.js" />
+    <Content Include="bower_components\bootstrap\js\tab.js" />
+    <Content Include="bower_components\bootstrap\js\tooltip.js" />
+    <Content Include="bower_components\bootstrap\js\transition.js" />
+    <Content Include="bower_components\bootstrap\package.js" />
+    <Content Include="bower_components\bootstrap\perfect-scrollbar\perfect-scrollbar.css" />
+    <Content Include="bower_components\bootstrap\perfect-scrollbar\perfect-scrollbar.js" />
+    <Content Include="bower_components\bootstrap\perfect-scrollbar\perfect-scrollbar.min.js" />
+    <Content Include="bower_components\bootstrap\progressbar\progressbar.js" />
+    <Content Include="bower_components\bootstrap\progressbar\progressbar.min.js" />
+    <Content Include="bower_components\bootstrap\wow\animate.css" />
+    <Content Include="bower_components\bootstrap\wow\wow.min.js" />
+    <Content Include="bower_components\ckeditor\adapters\jquery.js" />
+    <Content Include="bower_components\ckeditor\ckeditor.js" />
+    <Content Include="bower_components\ckeditor\config.js" />
+    <Content Include="bower_components\ckeditor\contents.css" />
+    <Content Include="bower_components\ckeditor\lang\af.js" />
+    <Content Include="bower_components\ckeditor\lang\ar.js" />
+    <Content Include="bower_components\ckeditor\lang\az.js" />
+    <Content Include="bower_components\ckeditor\lang\bg.js" />
+    <Content Include="bower_components\ckeditor\lang\bn.js" />
+    <Content Include="bower_components\ckeditor\lang\bs.js" />
+    <Content Include="bower_components\ckeditor\lang\ca.js" />
+    <Content Include="bower_components\ckeditor\lang\cs.js" />
+    <Content Include="bower_components\ckeditor\lang\cy.js" />
+    <Content Include="bower_components\ckeditor\lang\da.js" />
+    <Content Include="bower_components\ckeditor\lang\de-ch.js" />
+    <Content Include="bower_components\ckeditor\lang\de.js" />
+    <Content Include="bower_components\ckeditor\lang\el.js" />
+    <Content Include="bower_components\ckeditor\lang\en-au.js" />
+    <Content Include="bower_components\ckeditor\lang\en-ca.js" />
+    <Content Include="bower_components\ckeditor\lang\en-gb.js" />
+    <Content Include="bower_components\ckeditor\lang\en.js" />
+    <Content Include="bower_components\ckeditor\lang\eo.js" />
+    <Content Include="bower_components\ckeditor\lang\es-mx.js" />
+    <Content Include="bower_components\ckeditor\lang\es.js" />
+    <Content Include="bower_components\ckeditor\lang\et.js" />
+    <Content Include="bower_components\ckeditor\lang\eu.js" />
+    <Content Include="bower_components\ckeditor\lang\fa.js" />
+    <Content Include="bower_components\ckeditor\lang\fi.js" />
+    <Content Include="bower_components\ckeditor\lang\fo.js" />
+    <Content Include="bower_components\ckeditor\lang\fr-ca.js" />
+    <Content Include="bower_components\ckeditor\lang\fr.js" />
+    <Content Include="bower_components\ckeditor\lang\gl.js" />
+    <Content Include="bower_components\ckeditor\lang\gu.js" />
+    <Content Include="bower_components\ckeditor\lang\he.js" />
+    <Content Include="bower_components\ckeditor\lang\hi.js" />
+    <Content Include="bower_components\ckeditor\lang\hr.js" />
+    <Content Include="bower_components\ckeditor\lang\hu.js" />
+    <Content Include="bower_components\ckeditor\lang\id.js" />
+    <Content Include="bower_components\ckeditor\lang\is.js" />
+    <Content Include="bower_components\ckeditor\lang\it.js" />
+    <Content Include="bower_components\ckeditor\lang\ja.js" />
+    <Content Include="bower_components\ckeditor\lang\ka.js" />
+    <Content Include="bower_components\ckeditor\lang\km.js" />
+    <Content Include="bower_components\ckeditor\lang\ko.js" />
+    <Content Include="bower_components\ckeditor\lang\ku.js" />
+    <Content Include="bower_components\ckeditor\lang\lt.js" />
+    <Content Include="bower_components\ckeditor\lang\lv.js" />
+    <Content Include="bower_components\ckeditor\lang\mk.js" />
+    <Content Include="bower_components\ckeditor\lang\mn.js" />
+    <Content Include="bower_components\ckeditor\lang\ms.js" />
+    <Content Include="bower_components\ckeditor\lang\nb.js" />
+    <Content Include="bower_components\ckeditor\lang\nl.js" />
+    <Content Include="bower_components\ckeditor\lang\no.js" />
+    <Content Include="bower_components\ckeditor\lang\oc.js" />
+    <Content Include="bower_components\ckeditor\lang\pl.js" />
+    <Content Include="bower_components\ckeditor\lang\pt-br.js" />
+    <Content Include="bower_components\ckeditor\lang\pt.js" />
+    <Content Include="bower_components\ckeditor\lang\ro.js" />
+    <Content Include="bower_components\ckeditor\lang\ru.js" />
+    <Content Include="bower_components\ckeditor\lang\si.js" />
+    <Content Include="bower_components\ckeditor\lang\sk.js" />
+    <Content Include="bower_components\ckeditor\lang\sl.js" />
+    <Content Include="bower_components\ckeditor\lang\sq.js" />
+    <Content Include="bower_components\ckeditor\lang\sr-latn.js" />
+    <Content Include="bower_components\ckeditor\lang\sr.js" />
+    <Content Include="bower_components\ckeditor\lang\sv.js" />
+    <Content Include="bower_components\ckeditor\lang\th.js" />
+    <Content Include="bower_components\ckeditor\lang\tr.js" />
+    <Content Include="bower_components\ckeditor\lang\tt.js" />
+    <Content Include="bower_components\ckeditor\lang\ug.js" />
+    <Content Include="bower_components\ckeditor\lang\uk.js" />
+    <Content Include="bower_components\ckeditor\lang\vi.js" />
+    <Content Include="bower_components\ckeditor\lang\zh-cn.js" />
+    <Content Include="bower_components\ckeditor\lang\zh.js" />
+    <Content Include="bower_components\ckeditor\lang\_translationstatus.txt" />
+    <Content Include="bower_components\ckeditor\plugins\icons.png" />
+    <Content Include="bower_components\ckeditor\plugins\icons_hidpi.png" />
+    <Content Include="bower_components\ckeditor\samples\css\samples.css" />
+    <Content Include="bower_components\ckeditor\samples\img\github-top.png" />
+    <Content Include="bower_components\ckeditor\samples\img\header-bg.png" />
+    <Content Include="bower_components\ckeditor\samples\img\header-separator.png" />
+    <Content Include="bower_components\ckeditor\samples\img\logo.png" />
+    <Content Include="bower_components\ckeditor\samples\img\logo.svg" />
+    <Content Include="bower_components\ckeditor\samples\img\navigation-tip.png" />
+    <Content Include="bower_components\ckeditor\samples\index.html" />
+    <Content Include="bower_components\ckeditor\samples\js\sample.js" />
+    <Content Include="bower_components\ckeditor\samples\js\sf.js" />
+    <Content Include="bower_components\ckeditor\skins\kama\dialog.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\dialog_ie.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\dialog_ie7.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\dialog_ie8.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\dialog_iequirks.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\editor.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\editor_ie.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\editor_ie7.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\editor_ie8.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\editor_iequirks.css" />
+    <Content Include="bower_components\ckeditor\skins\kama\icons.png" />
+    <Content Include="bower_components\ckeditor\skins\kama\icons_hidpi.png" />
+    <Content Include="bower_components\ckeditor\skins\kama\images\dialog_sides.gif" />
+    <Content Include="bower_components\ckeditor\skins\kama\images\dialog_sides.png" />
+    <Content Include="bower_components\ckeditor\skins\kama\images\dialog_sides_rtl.png" />
+    <Content Include="bower_components\ckeditor\skins\kama\images\mini.gif" />
+    <Content Include="bower_components\ckeditor\skins\kama\images\spinner.gif" />
+    <Content Include="bower_components\ckeditor\skins\kama\images\sprites.png" />
+    <Content Include="bower_components\ckeditor\skins\kama\images\sprites_ie6.png" />
+    <Content Include="bower_components\ckeditor\skins\kama\images\toolbar_start.gif" />
+    <Content Include="bower_components\ckeditor\skins\kama\skin.js" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\dialog.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\dialog_ie.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\dialog_ie8.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\dialog_iequirks.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\editor.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\editor_gecko.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\editor_ie.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\editor_ie8.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\editor_iequirks.css" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\icons.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\icons_hidpi.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\arrow.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\close.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\hidpi\close.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\hidpi\lock-open.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\hidpi\lock.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\hidpi\refresh.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\lock-open.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\lock.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\refresh.png" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\images\spinner.gif" />
+    <Content Include="bower_components\ckeditor\skins\moono\dialog.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\dialog_ie.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\dialog_ie7.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\dialog_ie8.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\dialog_iequirks.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\editor.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\editor_gecko.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\editor_ie.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\editor_ie7.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\editor_ie8.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\editor_iequirks.css" />
+    <Content Include="bower_components\ckeditor\skins\moono\icons.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\icons_hidpi.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\anchor.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\arrow.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\close.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\hidpi\anchor.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\hidpi\close.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\hidpi\lock-open.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\hidpi\lock.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\hidpi\refresh.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\lock-open.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\lock.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\refresh.png" />
+    <Content Include="bower_components\ckeditor\skins\moono\images\spinner.gif" />
+    <Content Include="bower_components\ckeditor\skins\moono\skin.js" />
+    <Content Include="bower_components\ckeditor\styles.js" />
+    <Content Include="bower_components\css\bootstrap-grid.css" />
+    <Content Include="bower_components\css\bootstrap-grid.min.css" />
+    <Content Include="bower_components\css\bootstrap-reboot.css" />
+    <Content Include="bower_components\css\bootstrap-reboot.min.css" />
+    <Content Include="bower_components\css\bootstrap.css" />
+    <Content Include="bower_components\css\bootstrap.min.css" />
+    <Content Include="bower_components\css\buttoncss.css" />
+    <Content Include="bower_components\css\gridview.css" />
+    <Content Include="bower_components\css\gridview.min.css" />
+    <Content Include="bower_components\css\stylesAsn.min.css" />
+    <Content Include="bower_components\css\theme.css" />
+    <Content Include="bower_components\css\theme.min.css" />
+    <Content Include="bower_components\fastclick\lib\fastclick.js" />
+    <Content Include="bower_components\Flot\excanvas.js" />
+    <Content Include="bower_components\Flot\excanvas.min.js" />
+    <Content Include="bower_components\Flot\jquery.colorhelpers.js" />
+    <Content Include="bower_components\Flot\jquery.flot.canvas.js" />
+    <Content Include="bower_components\Flot\jquery.flot.categories.js" />
+    <Content Include="bower_components\Flot\jquery.flot.crosshair.js" />
+    <Content Include="bower_components\Flot\jquery.flot.errorbars.js" />
+    <Content Include="bower_components\Flot\jquery.flot.fillbetween.js" />
+    <Content Include="bower_components\Flot\jquery.flot.image.js" />
+    <Content Include="bower_components\Flot\jquery.flot.js" />
+    <Content Include="bower_components\Flot\jquery.flot.navigate.js" />
+    <Content Include="bower_components\Flot\jquery.flot.pie.js" />
+    <Content Include="bower_components\Flot\jquery.flot.resize.js" />
+    <Content Include="bower_components\Flot\jquery.flot.selection.js" />
+    <Content Include="bower_components\Flot\jquery.flot.stack.js" />
+    <Content Include="bower_components\Flot\jquery.flot.symbol.js" />
+    <Content Include="bower_components\Flot\jquery.flot.threshold.js" />
+    <Content Include="bower_components\Flot\jquery.flot.time.js" />
+    <Content Include="bower_components\Flot\jquery.js" />
+    <Content Include="bower_components\Flot\LICENSE.txt" />
+    <Content Include="bower_components\font-awesome\css\all.css" />
+    <Content Include="bower_components\font-awesome\css\font-awesome.css" />
+    <Content Include="bower_components\font-awesome\css\font-awesome.min.css" />
+    <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.svg" />
+    <Content Include="bower_components\font-awesome\fonts\truck-solid.svg" />
+    <Content Include="bower_components\font-awesome\HELP-US-OUT.txt" />
+    <Content Include="bower_components\Ionicons\css\ionicons.css" />
+    <Content Include="bower_components\Ionicons\css\ionicons.min.css" />
+    <Content Include="bower_components\jquery\dist\core.js" />
+    <Content Include="bower_components\jquery\dist\jquery.js" />
+    <Content Include="bower_components\jquery\dist\jquery.min.js" />
+    <Content Include="bower_components\jquery\dist\jquery.slim.js" />
+    <Content Include="bower_components\jquery\dist\jquery.slim.min.js" />
+    <Content Include="bower_components\jquery\external\sizzle\dist\sizzle.js" />
+    <Content Include="bower_components\jquery\external\sizzle\dist\sizzle.min.js" />
+    <Content Include="bower_components\jquery\external\sizzle\LICENSE.txt" />
+    <Content Include="bower_components\jquery\src\ajax.js" />
+    <Content Include="bower_components\jquery\src\attributes.js" />
+    <Content Include="bower_components\jquery\src\callbacks.js" />
+    <Content Include="bower_components\jquery\src\core.js" />
+    <Content Include="bower_components\jquery\src\css.js" />
+    <Content Include="bower_components\jquery\src\data.js" />
+    <Content Include="bower_components\jquery\src\deferred.js" />
+    <Content Include="bower_components\jquery\src\deprecated.js" />
+    <Content Include="bower_components\jquery\src\dimensions.js" />
+    <Content Include="bower_components\jquery\src\effects.js" />
+    <Content Include="bower_components\jquery\src\event.js" />
+    <Content Include="bower_components\jquery\src\jquery.js" />
+    <Content Include="bower_components\jquery\src\manipulation.js" />
+    <Content Include="bower_components\jquery\src\offset.js" />
+    <Content Include="bower_components\jquery\src\queue.js" />
+    <Content Include="bower_components\jquery\src\selector-native.js" />
+    <Content Include="bower_components\jquery\src\selector-sizzle.js" />
+    <Content Include="bower_components\jquery\src\selector.js" />
+    <Content Include="bower_components\jquery\src\serialize.js" />
+    <Content Include="bower_components\jquery\src\traversing.js" />
+    <Content Include="bower_components\jquery\src\wrap.js" />
+    <Content Include="ChangePassword.aspx" />
+    <Content Include="CSS\gridviewstyle.css" />
+    <Content Include="dist\css\AdminLTE.css" />
+    <Content Include="dist\css\AdminLTE.min.css" />
+    <Content Include="dist\css\alt\AdminLTE-bootstrap-social.css" />
+    <Content Include="dist\css\alt\AdminLTE-bootstrap-social.min.css" />
+    <Content Include="dist\css\alt\AdminLTE-fullcalendar.css" />
+    <Content Include="dist\css\alt\AdminLTE-fullcalendar.min.css" />
+    <Content Include="dist\css\alt\AdminLTE-select2.css" />
+    <Content Include="dist\css\alt\AdminLTE-select2.min.css" />
+    <Content Include="dist\css\alt\AdminLTE-without-plugins.css" />
+    <Content Include="dist\css\alt\AdminLTE-without-plugins.min.css" />
+    <Content Include="dist\css\skins\skin-black-light.css" />
+    <Content Include="dist\css\skins\skin-black-light.min.css" />
+    <Content Include="dist\css\skins\skin-black.css" />
+    <Content Include="dist\css\skins\skin-black.min.css" />
+    <Content Include="dist\css\skins\skin-blue-light.css" />
+    <Content Include="dist\css\skins\skin-blue-light.min.css" />
+    <Content Include="dist\css\skins\skin-blue.css" />
+    <Content Include="dist\css\skins\skin-blue.min.css" />
+    <Content Include="dist\css\skins\skin-green-light.css" />
+    <Content Include="dist\css\skins\skin-green-light.min.css" />
+    <Content Include="dist\css\skins\skin-green.css" />
+    <Content Include="dist\css\skins\skin-green.min.css" />
+    <Content Include="dist\css\skins\skin-purple-light.css" />
+    <Content Include="dist\css\skins\skin-purple-light.min.css" />
+    <Content Include="dist\css\skins\skin-purple.css" />
+    <Content Include="dist\css\skins\skin-purple.min.css" />
+    <Content Include="dist\css\skins\skin-red-light.css" />
+    <Content Include="dist\css\skins\skin-red-light.min.css" />
+    <Content Include="dist\css\skins\skin-red.css" />
+    <Content Include="dist\css\skins\skin-red.min.css" />
+    <Content Include="dist\css\skins\skin-yellow-light.css" />
+    <Content Include="dist\css\skins\skin-yellow-light.min.css" />
+    <Content Include="dist\css\skins\skin-yellow.css" />
+    <Content Include="dist\css\skins\skin-yellow.min.css" />
+    <Content Include="dist\css\skins\_all-skins.css" />
+    <Content Include="dist\css\skins\_all-skins.min.css" />
+    <Content Include="dist\css\style.css" />
+    <Content Include="dist\css\StyleSheet.css" />
+    <Content Include="dist\img\default-50x50.gif" />
+    <Content Include="dist\img\icons.png" />
+    <Content Include="dist\img\icons8-user-80.png" />
+    <Content Include="dist\img\SG_Warehouse.png" />
+    <Content Include="dist\js\adminlte.js" />
+    <Content Include="dist\js\adminlte.min.js" />
+    <Content Include="dist\js\bootbox.min.js" />
+    <Content Include="dist\js\demo.js" />
+    <Content Include="dist\Login Vendor\bootstrap.min1.css" />
+    <Content Include="dist\Login Vendor\bootstrap.min1.js" />
+    <Content Include="GridViewPaging.ascx" />
+    <Content Include="Images\.gitignore" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.css.map" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap-theme.min.css.map" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.css.map" />
+    <Content Include="bower_components\bootstrap\dist\css\bootstrap.min.css.map" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bower_components\bootstrap\dist\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="bower_components\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="bower_components\bootstrap\grunt\.jshintrc" />
+    <Content Include="bower_components\bootstrap\grunt\.stylelintrc" />
+    <Content Include="bower_components\bootstrap\grunt\configBridge.json" />
+    <Content Include="bower_components\bootstrap\js\.jscsrc" />
+    <Content Include="bower_components\bootstrap\js\.jshintrc" />
+    <Content Include="bower_components\bootstrap\less\alerts.less" />
+    <Content Include="bower_components\bootstrap\less\badges.less" />
+    <Content Include="bower_components\bootstrap\less\bootstrap.less" />
+    <Content Include="bower_components\bootstrap\less\breadcrumbs.less" />
+    <Content Include="bower_components\bootstrap\less\button-groups.less" />
+    <Content Include="bower_components\bootstrap\less\buttons.less" />
+    <Content Include="bower_components\bootstrap\less\carousel.less" />
+    <Content Include="bower_components\bootstrap\less\close.less" />
+    <Content Include="bower_components\bootstrap\less\code.less" />
+    <Content Include="bower_components\bootstrap\less\component-animations.less" />
+    <Content Include="bower_components\bootstrap\less\dropdowns.less" />
+    <Content Include="bower_components\bootstrap\less\forms.less" />
+    <Content Include="bower_components\bootstrap\less\glyphicons.less" />
+    <Content Include="bower_components\bootstrap\less\grid.less" />
+    <Content Include="bower_components\bootstrap\less\input-groups.less" />
+    <Content Include="bower_components\bootstrap\less\jumbotron.less" />
+    <Content Include="bower_components\bootstrap\less\labels.less" />
+    <Content Include="bower_components\bootstrap\less\list-group.less" />
+    <Content Include="bower_components\bootstrap\less\media.less" />
+    <Content Include="bower_components\bootstrap\less\mixins.less" />
+    <Content Include="bower_components\bootstrap\less\modals.less" />
+    <Content Include="bower_components\bootstrap\less\navbar.less" />
+    <Content Include="bower_components\bootstrap\less\navs.less" />
+    <Content Include="bower_components\bootstrap\less\normalize.less" />
+    <Content Include="bower_components\bootstrap\less\pager.less" />
+    <Content Include="bower_components\bootstrap\less\pagination.less" />
+    <Content Include="bower_components\bootstrap\less\panels.less" />
+    <Content Include="bower_components\bootstrap\less\popovers.less" />
+    <Content Include="bower_components\bootstrap\less\print.less" />
+    <Content Include="bower_components\bootstrap\less\progress-bars.less" />
+    <Content Include="bower_components\bootstrap\less\responsive-embed.less" />
+    <Content Include="bower_components\bootstrap\less\responsive-utilities.less" />
+    <Content Include="bower_components\bootstrap\less\scaffolding.less" />
+    <Content Include="bower_components\bootstrap\less\tables.less" />
+    <Content Include="bower_components\bootstrap\less\theme.less" />
+    <Content Include="bower_components\bootstrap\less\thumbnails.less" />
+    <Content Include="bower_components\bootstrap\less\tooltip.less" />
+    <Content Include="bower_components\bootstrap\less\type.less" />
+    <Content Include="bower_components\bootstrap\less\utilities.less" />
+    <Content Include="bower_components\bootstrap\less\variables.less" />
+    <Content Include="bower_components\bootstrap\less\wells.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\alerts.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\background-variant.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\border-radius.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\buttons.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\center-block.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\clearfix.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\forms.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\gradients.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\grid-framework.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\grid.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\hide-text.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\image.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\labels.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\list-group.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\nav-divider.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\nav-vertical-align.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\opacity.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\pagination.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\panels.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\progress-bar.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\reset-filter.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\reset-text.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\resize.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\responsive-visibility.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\size.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\tab-focus.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\table-row.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\text-emphasis.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\text-overflow.less" />
+    <Content Include="bower_components\bootstrap\less\mixins\vendor-prefixes.less" />
+    <Content Include="bower_components\bootstrap\nuget\bootstrap.less.nuspec" />
+    <Content Include="bower_components\bootstrap\nuget\bootstrap.nuspec" />
+    <Content Include="bower_components\bootstrap\nuget\MyGet.ps1" />
+    <Content Include="bower_components\bootstrap\.bower.json" />
+    <Content Include="bower_components\bootstrap\bower.json" />
+    <Content Include="bower_components\bootstrap\CHANGELOG.md" />
+    <Content Include="bower_components\bootstrap\Gemfile" />
+    <Content Include="bower_components\bootstrap\Gemfile.lock" />
+    <Content Include="bower_components\bootstrap\ISSUE_TEMPLATE.md" />
+    <Content Include="bower_components\bootstrap\LICENSE" />
+    <Content Include="bower_components\bootstrap\package-lock.json" />
+    <Content Include="bower_components\bootstrap\package.json" />
+    <Content Include="bower_components\bootstrap\README.md" />
+    <Content Include="bower_components\ckeditor\skins\kama\readme.md" />
+    <Content Include="bower_components\ckeditor\skins\moono\readme.md" />
+    <Content Include="bower_components\ckeditor\skins\moono-lisa\readme.md" />
+    <Content Include="bower_components\ckeditor\.bower.json" />
+    <Content Include="bower_components\ckeditor\bower.json" />
+    <Content Include="bower_components\ckeditor\CHANGES.md" />
+    <Content Include="bower_components\ckeditor\composer.json" />
+    <Content Include="bower_components\ckeditor\LICENSE.md" />
+    <Content Include="bower_components\ckeditor\package.json" />
+    <Content Include="bower_components\ckeditor\README.md" />
+    <Content Include="bower_components\css\bootstrap-grid.css.map" />
+    <Content Include="bower_components\css\bootstrap-grid.min.css.map" />
+    <Content Include="bower_components\css\bootstrap-reboot.css.map" />
+    <Content Include="bower_components\css\bootstrap-reboot.min.css.map" />
+    <Content Include="bower_components\css\bootstrap.css.map" />
+    <Content Include="bower_components\css\bootstrap.min.css.map" />
+    <Content Include="bower_components\fastclick\.bower.json" />
+    <Content Include="bower_components\fastclick\bower.json" />
+    <Content Include="bower_components\fastclick\LICENSE" />
+    <Content Include="bower_components\fastclick\README.md" />
+    <Content Include="bower_components\Flot\.bower.json" />
+    <Content Include="bower_components\Flot\.travis.yml" />
+    <Content Include="bower_components\Flot\API.md" />
+    <Content Include="bower_components\Flot\component.json" />
+    <Content Include="bower_components\Flot\CONTRIBUTING.md" />
+    <Content Include="bower_components\Flot\FAQ.md" />
+    <Content Include="bower_components\Flot\flot.jquery.json" />
+    <Content Include="bower_components\Flot\Makefile" />
+    <Content Include="bower_components\Flot\NEWS.md" />
+    <Content Include="bower_components\Flot\package.json" />
+    <Content Include="bower_components\Flot\PLUGINS.md" />
+    <Content Include="bower_components\Flot\README.md" />
+    <Content Include="bower_components\font-awesome\.bower.json" />
+    <Content Include="bower_components\font-awesome\.npmignore" />
+    <Content Include="bower_components\font-awesome\bower.json" />
+    <Content Include="bower_components\font-awesome\css\font-awesome.css.map" />
+    <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.eot" />
+    <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.ttf" />
+    <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.woff" />
+    <Content Include="bower_components\font-awesome\fonts\fontawesome-webfont.woff2" />
+    <Content Include="bower_components\font-awesome\fonts\FontAwesome.otf" />
+    <Content Include="bower_components\font-awesome\less\animated.less" />
+    <Content Include="bower_components\font-awesome\less\bordered-pulled.less" />
+    <Content Include="bower_components\font-awesome\less\core.less" />
+    <Content Include="bower_components\font-awesome\less\fixed-width.less" />
+    <Content Include="bower_components\font-awesome\less\font-awesome.less" />
+    <Content Include="bower_components\font-awesome\less\icons.less" />
+    <Content Include="bower_components\font-awesome\less\larger.less" />
+    <Content Include="bower_components\font-awesome\less\list.less" />
+    <Content Include="bower_components\font-awesome\less\mixins.less" />
+    <Content Include="bower_components\font-awesome\less\path.less" />
+    <Content Include="bower_components\font-awesome\less\rotated-flipped.less" />
+    <Content Include="bower_components\font-awesome\less\screen-reader.less" />
+    <Content Include="bower_components\font-awesome\less\stacked.less" />
+    <Content Include="bower_components\font-awesome\less\variables.less" />
+    <Content Include="bower_components\font-awesome\scss\font-awesome.scss" />
+    <Content Include="bower_components\font-awesome\scss\_animated.scss" />
+    <Content Include="bower_components\font-awesome\scss\_bordered-pulled.scss" />
+    <Content Include="bower_components\font-awesome\scss\_core.scss" />
+    <Content Include="bower_components\font-awesome\scss\_fixed-width.scss" />
+    <Content Include="bower_components\font-awesome\scss\_icons.scss" />
+    <Content Include="bower_components\font-awesome\scss\_larger.scss" />
+    <Content Include="bower_components\font-awesome\scss\_list.scss" />
+    <Content Include="bower_components\font-awesome\scss\_mixins.scss" />
+    <Content Include="bower_components\font-awesome\scss\_path.scss" />
+    <Content Include="bower_components\font-awesome\scss\_rotated-flipped.scss" />
+    <Content Include="bower_components\font-awesome\scss\_screen-reader.scss" />
+    <Content Include="bower_components\font-awesome\scss\_stacked.scss" />
+    <Content Include="bower_components\font-awesome\scss\_variables.scss" />
+    <Content Include="bower_components\jquery\external\sizzle\dist\sizzle.min.map" />
+    <Content Include="bower_components\jquery\dist\jquery.min.map" />
+    <Content Include="bower_components\jquery\dist\jquery.slim.min.map" />
+    <Content Include="bower_components\jquery\src\.eslintrc.json" />
+    <Content Include="dist\css\adminlte.css.map" />
+    <Content Include="dist\css\adminlte.min.css.map" />
+    <Content Include="Images\cancel%2802.06%29.png" />
+    <Content Include="Images\delete-button.png" />
+    <Content Include="Images\expiry_date.png" />
+    <Content Include="Images\GurusoftLogo.gif" />
+    <Content Include="Images\Releaseorder.png" />
+    <Content Include="Images\searchicon.png" />
+    <Content Include="Images\select pallet2.png" />
+    <Content Include="Images\select product.png" />
+    <Content Include="Images\Settings.png" />
+    <Content Include="Images\Transparent WHITE.png" />
+    <Content Include="Images\upload-button-2468752.png" />
+    <Content Include="JCSV3Images\1 %281%29.jpg" />
+    <Content Include="JCSV3Images\1 %281%29.png" />
+    <Content Include="JCSV3Images\1 %282%29.jpg" />
+    <Content Include="JCSV3Images\61391.png" />
+    <Content Include="JCSV3Images\back1.jpg" />
+    <Content Include="JCSV3Images\back2.jpg" />
+    <Content Include="JCSV3Images\back3.jpg" />
+    <Content Include="JCSV3Images\back4.jpg" />
+    <Content Include="JCSV3Images\back5.jpg" />
+    <Content Include="JCSV3Images\back6.jpg" />
+    <Content Include="JCSV3Images\background1.jpg" />
+    <Content Include="JCSV3Images\backgroundempty.jpg" />
+    <Content Include="JCSV3Images\bgtransperant.png" />
+    <Content Include="JCSV3Images\brandline.png" />
+    <Content Include="JCSV3Images\button_search.png" />
+    <Content Include="JCSV3Images\cancel%2802.06%29.png" />
+    <Content Include="JCSV3Images\clear.png" />
+    <Content Include="JCSV3Images\companyLogo.jpg" />
+    <Content Include="JCSV3Images\CompanyLogo.png" />
+    <Content Include="JCSV3Images\Contact.png" />
+    <Content Include="JCSV3Images\contactsnew.jpg" />
+    <Content Include="JCSV3Images\delete-button.png" />
+    <Content Include="JCSV3Images\delivery_options.png" />
+    <Content Include="JCSV3Images\dim1.jpg" />
+    <Content Include="JCSV3Images\dimbg.jpg" />
+    <Content Include="JCSV3Images\excel_icon.png" />
+    <Content Include="JCSV3Images\expiry date2.png" />
+    <Content Include="JCSV3Images\expiry_date.png" />
+    <Content Include="JCSV3Images\first.png" />
+    <Content Include="JCSV3Images\first_2.png" />
+    <Content Include="JCSV3Images\first_OLd.png" />
+    <Content Include="JCSV3Images\founders.png" />
+    <Content Include="JCSV3Images\homenew.png" />
+    <Content Include="JCSV3Images\homenew1.png" />
+    <Content Include="JCSV3Images\homenew2.png" />
+    <Content Include="JCSV3Images\homenew3.png" />
+    <Content Include="JCSV3Images\HomePage_3e.jpg" />
+    <Content Include="JCSV3Images\HomePage_3e.png" />
+    <Content Include="JCSV3Images\home_v1.jpg" />
+    <Content Include="JCSV3Images\home_v2.png" />
+    <Content Include="JCSV3Images\home_v3.png" />
+    <Content Include="JCSV3Images\image.gif" />
+    <Content Include="JCSV3Images\jcs logo new.png" />
+    <Content Include="JCSV3Images\jcs logo.png" />
+    <Content Include="JCSV3Images\JCS Logo_transparent.png" />
+    <Content Include="JCSV3Images\JCSHeartsMonogram.jpg" />
+    <Content Include="JCSV3Images\JCS_Logo.png" />
+    <Content Include="JCSV3Images\last.png" />
+    <Content Include="JCSV3Images\last_OLD.png" />
+    <Content Include="JCSV3Images\loader-JCS.gif" />
+    <Content Include="JCSV3Images\loader.gif" />
+    <Content Include="JCSV3Images\loader123.gif" />
+    <Content Include="JCSV3Images\LoaderV3.gif" />
+    <Content Include="JCSV3Images\next.png" />
+    <Content Include="JCSV3Images\next_OLD.png" />
+    <Content Include="JCSV3Images\our-promise.jpg" />
+    <Content Include="JCSV3Images\Preloader_10.gif" />
+    <Content Include="JCSV3Images\prev.png" />
+    <Content Include="JCSV3Images\prev_OLD.png" />
+    <Content Include="JCSV3Images\Releaseorder.png" />
+    <Content Include="JCSV3Images\samplelogo.png" />
+    <Content Include="JCSV3Images\Search-icon.png" />
+    <Content Include="JCSV3Images\searchicon.png" />
+    <Content Include="JCSV3Images\select pallet.png" />
+    <Content Include="JCSV3Images\select pallet1.png" />
+    <Content Include="JCSV3Images\select pallet2.png" />
+    <Content Include="JCSV3Images\select product.png" />
+    <Content Include="JCSV3Images\shopping-cart.png" />
+    <Content Include="JCSV3Images\ShoppingCartIcon.png" />
+    <Content Include="JCSV3Images\slide-1.jpg" />
+    <Content Include="JCSV3Images\slide-2.jpg" />
+    <Content Include="JCSV3Images\slide-3.jpg" />
+    <Content Include="JCSV3Images\SUSHI Logo.jpg" />
+    <Content Include="JCSV3Images\sushi-express-logo.png" />
+    <Content Include="JCSV3Images\technology.jpg" />
+    <Content Include="JCSV3Images\Transparent WHITE.png" />
+    <Content Include="JCSV3Images\warehousing1.jpg" />
+    <Content Include="js\1.8.9\jquery-ui.css" />
+    <Content Include="js\1.8.9\jquery-ui.js" />
+    <Content Include="js\jquery-1.7.js" />
+    <Content Include="MaintenancePage.aspx" />
+    <Content Include="Properties\DataSources\System.Data.DataSet.datasource" />
+    <Content Include="Properties\DataSources\System.Data.DataTable.datasource" />
+    <Content Include="RedirectPage.aspx" />
+    <Content Include="Scripts\AutoLogout.js" />
+    <Content Include="Scripts\script001.js" />
+    <Content Include="Scripts\Validation.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjax.js" />
+    <Content Include="Scripts\WebForms\MSAjax\MicrosoftAjaxWebForms.js" />
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.DataManipulationExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.DataManipulationR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ExportCommonWindowToExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ExportSearchToExcelCustomizedR2V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ExportSearchToExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ExportToExcelLastRecordR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ImportExcelFileR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ImportExcelFileR1V2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List11R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List12R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List1R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List2R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List3R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List4R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List5R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List6R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List7R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List8R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.List9R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ListExpression1R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ProcessExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11CollaborationService\PRDG11EOSV03WB.G11CollaborationService.ValidateExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="ERMR  webconfig\Web.config" />
+    <None Include="Service References\G11CollaborationService\Service.disco" />
+    <None Include="Service References\G11CollaborationService\configuration91.svcinfo" />
+    <None Include="Service References\G11CollaborationService\configuration.svcinfo" />
+    <None Include="Service References\G11CollaborationService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.DataManipulationLoginHistoryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.DataManipulationR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.DataManipulationServerLoginHistoryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ExportCommonWindowToExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ExportSearchToExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ExportServerCommonWindowToExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ExportServerSearchToExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ExportServerToExcelEnquiryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ExportToExcelEnquiryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ExportToExcelLastRecordR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ExportToServerExcelLastRecordR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.List1R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.List2R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.List3R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.List4R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.List5R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ListLoginHistoryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ListR1V2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ListServerLoginHistoryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ListUserAccessR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.ListUserLoginSessionR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.UpdateBusinessEntityR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.UpdateLoginHistoryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWAuditTrialService\PRDG11EOSV03WB.G11EISMWAuditTrialService.UpdateServerLoginHistoryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\G11EISMWAuditTrialService\Service.disco" />
+    <None Include="Service References\G11EISMWAuditTrialService\configuration91.svcinfo" />
+    <None Include="Service References\G11EISMWAuditTrialService\configuration.svcinfo" />
+    <None Include="Service References\G11EISMWAuditTrialService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ChangePasswordR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.DataManipulationReportingToolsSettingsR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetAutotaskconfigTableR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetComponentAccessPolicyR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetDataTableDefaultValueResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetDocReportAccessPolicyR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetReportingToolArgumentsTableR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetReportingToolsAccessSettingsR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetReportingToolsSettingsR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetReportingToolsVersionSettingsR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetReportingToolsVersionsR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetReportUserSettingTableR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetUIRelatedTablesR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetUserSettingsR1V2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ReteriveDBConnectionR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ReteriveLOV2R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ReteriveLOV3R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ReteriveLOV4R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ReteriveLOV5R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ReteriveLOV6R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ReteriveVersionNoR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.RetrieveEndOfMonthR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.RetrieveLOV1R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.RetrieveStartOfMonthR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ServerDefaultDateTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ServerThisMthStartEndDateR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ArrangeHRNNumberResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetHRNFromBarcodeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.GetServerDateTimeResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\G11EISMWSelectionService\PRDG11EOSV03WB.G11EISMWSelectionService.ValidateUserLoginFromDBR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\G11EISMWSelectionService\SelectionService.wsdl" />
+    <None Include="Service References\G11EISMWSelectionService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11EISMWSelectionService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11EISMWSelectionService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11EISMWSelectionService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11EISMWSelectionService\Service4.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSG11EISMWAdminService\AdminService.wsdl" />
+    <None Include="Service References\G11EISMWSelectionService\Service.disco" />
+    <None Include="Service References\G11EISMWSelectionService\configuration91.svcinfo" />
+    <None Include="Service References\G11EISMWSelectionService\configuration.svcinfo" />
+    <None Include="Service References\G11EISMWSelectionService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.DataManipulationExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.DataManipulationR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ExportCommonWindowToExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ExportSearchToExcelCustomizedR2V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ExportSearchToExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ExportToExcelLastRecordR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ImportExcelFileR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ImportExcelFileR1V2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ImportExcelFileR1V3Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List11R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List12R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List1R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List2R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List3R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List4R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List5R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List6R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List7R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List8R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.List9R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ListExpression1R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ProcessExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSG11EISMWAdminService\PRDG11EOSV03WB.GSG11EISMWAdminService.ValidateExcelR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GSG11EISMWAdminService\Service.disco" />
+    <None Include="Service References\GSG11EISMWAdminService\configuration91.svcinfo" />
+    <None Include="Service References\GSG11EISMWAdminService\configuration.svcinfo" />
+    <None Include="Service References\GSG11EISMWAdminService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List10R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List11R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List12R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List13R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List14R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List15R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List16R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List17R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List18R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List19R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List1R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List20R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List21R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List22R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List23R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List24R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List25R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List26R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List27R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List28R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List29R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List2R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List30R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List31R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List32R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List33R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List3R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List4R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List5R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List6R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List7R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List8R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.List9R1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSMRTSListService\PRDG11EOSV03WB.GSMRTSListService.ListR1V2Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GSMRTSListService\Service.disco" />
+    <None Include="Service References\GSMRTSListService\configuration91.svcinfo" />
+    <None Include="Service References\GSMRTSListService\configuration.svcinfo" />
+    <None Include="Service References\GSMRTSListService\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ADUserListResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ApplicationSettingsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ComponentAndLOVSettingsDMLDRR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ComponentAndLOVSettingsDMLDRR3V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ComponentAndLOVSettingsDMLR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ComponentAndLOVSettingsDMLR3V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.CreateSalesLocSequenceDRR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.CreateSalesLocSequenceR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.DMLDRR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.DMLR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GenerateReportingToolsR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GetComponentAccessPolicyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GetComponentDefaultValuesResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GetDocReportAccessPolicyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GetSequenceResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GetSystemMessageR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GetTransactionConfigurationResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GetUIRelatedTablesR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.GetUIRelatedTablesR2V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.InterfaceLogDRR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.InterfaceLogR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.LastRecordR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ListDBProviderR3V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ListExceptionsR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ListR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ListR2V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ListR3V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ReportingToolsLastRecordR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ResetPasswordResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.SaveUserSettingsDRR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.SaveUserSettingsR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.SystemAccessPolicyResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.UpdateDictionaryDRR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.UpdateDictionaryR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.UserDetailsResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ValidateAndDisableUserAccountResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.ValidateLoginResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.WriteExceptionMobR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.WriteExceptionR1V1Response.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.WriteExceptionResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <Content Include="Service References\GSXMLASBusinessServices\PRDG11EOSV03WB.GSXMLASBusinessServices.WriteTimeStampDRLogonResponse.datasource">
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Content>
+    <None Include="Service References\GSMRTSListService\MRTSListService.wsdl" />
+    <None Include="Service References\GSMRTSListService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSMRTSListService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSMRTSListService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSMRTSListService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSXMLASBusinessServices\Service1.disco" />
+    <None Include="Service References\GSXMLASBusinessServices\configuration91.svcinfo" />
+    <None Include="Service References\GSXMLASBusinessServices\configuration.svcinfo" />
+    <None Include="Service References\GSXMLASBusinessServices\Reference.svcmap">
+      <Generator>WCF Proxy Generator</Generator>
+      <LastGenOutput>Reference.cs</LastGenOutput>
+    </None>
+    <Content Include="UserScreenCluster.aspx" />
+    <Content Include="WriteBinaryAsFile.aspx" />
+    <Content Include="WebService.asmx" />
+    <Content Include="Images\AttachNo.jpg" />
+    <Content Include="Images\AttachYes.png" />
+    <Content Include="Images\cancel%2802.06%29_OLD.png" />
+    <Content Include="Images\clear-512.png" />
+    <Content Include="Images\closed.png" />
+    <Content Include="Images\CompanyLogo.png" />
+    <Content Include="Images\Double Ring-1s-200px.gif" />
+    <Content Include="Images\excel_icon.png" />
+    <Content Include="Images\iconfinder_Find_49245.png" />
+    <Content Include="Images\icons8-delete-bin-64.png" />
+    <Content Include="Images\icons8-restart-64.png" />
+    <Content Include="Images\image-not-found.png" />
+    <Content Include="Images\loader.gif" />
+    <Content Include="Images\Loader_3.gif" />
+    <Content Include="Images\LoginLogo.png" />
+    <Content Include="Images\Remove.png" />
+    <Content Include="Images\Reports.png" />
+    <Content Include="Images\Storage_Warehouse.png" />
+    <Content Include="Images\ui-icons_d8e7f3_256x240.png" />
+    <Content Include="Images\up-arrow.png" />
+    <Content Include="Images\Yes.png" />
+    <Content Include="js\bootstrap.min.js" />
+    <Content Include="js\Calendar\jquery-1.7.min.js" />
+    <Content Include="js\Calendar\jquery-ui.css" />
+    <Content Include="js\Calendar\jquery-ui.min.js" />
+    <Content Include="js\jquery-3.3.1.min.js" />
+    <Content Include="js\popper.min.js" />
+    <Content Include="Login.aspx" />
+    <Content Include="UserHistory.aspx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Service References\G11CollaborationService\CollaborationService.wsdl" />
+    <None Include="Service References\G11CollaborationService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11CollaborationService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11CollaborationService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11CollaborationService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11EISMWAuditTrialService\AuditTrialService.wsdl" />
+    <None Include="Service References\G11EISMWAuditTrialService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11EISMWAuditTrialService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11EISMWAuditTrialService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\G11EISMWAuditTrialService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSG11EISMWAdminService\Service.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSG11EISMWAdminService\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSG11EISMWAdminService\Service2.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSG11EISMWAdminService\Service3.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSXMLASBusinessServices\Service1.wsdl" />
+    <None Include="Service References\GSXMLASBusinessServices\Service1.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSXMLASBusinessServices\Service11.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSXMLASBusinessServices\Service12.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSXMLASBusinessServices\Service13.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Service References\GSXMLASBusinessServices\Service14.xsd">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MaintenancePage.aspx.cs">
+      <DependentUpon>MaintenancePage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="MaintenancePage.aspx.designer.cs">
+      <DependentUpon>MaintenancePage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="RedirectPage.aspx.cs">
+      <DependentUpon>RedirectPage.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="RedirectPage.aspx.designer.cs">
+      <DependentUpon>RedirectPage.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\G11CollaborationService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\G11EISMWAuditTrialService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\G11EISMWSelectionService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GSG11EISMWAdminService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GSMRTSListService\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="Service References\GSXMLASBusinessServices\Reference.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Reference.svcmap</DependentUpon>
+    </Compile>
+    <Compile Include="UserHistory.aspx.cs">
+      <DependentUpon>UserHistory.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserHistory.aspx.designer.cs">
+      <DependentUpon>UserHistory.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserScreenCluster.aspx.cs">
+      <DependentUpon>UserScreenCluster.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserScreenCluster.aspx.designer.cs">
+      <DependentUpon>UserScreenCluster.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WebService.asmx.cs">
+      <DependentUpon>WebService.asmx</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="WriteBinaryAsFile.aspx.cs">
+      <DependentUpon>WriteBinaryAsFile.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WriteBinaryAsFile.aspx.designer.cs">
+      <DependentUpon>WriteBinaryAsFile.aspx</DependentUpon>
+    </Compile>
+    <Content Include="App_Code\ServerSideViewStateAdapter.cs" />
+    <Content Include="App_Code\UploadDetail.cs" />
+    <Compile Include="ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="CommonFunction\CommonFunctions.cs" />
+    <Compile Include="CommonFunction\GridViewPagingDelegate.cs" />
+    <Compile Include="CommonFunction\GridViewPagingEventArgs.cs" />
+    <Compile Include="GridViewPaging.ascx.cs">
+      <DependentUpon>GridViewPaging.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="GridViewPaging.ascx.designer.cs">
+      <DependentUpon>GridViewPaging.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="GridViewPagingDelegate.cs" />
+    <Compile Include="Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bower_components\inputmask\" />
+    <Folder Include="bower_components\ion.rangeSlider\" />
+    <Folder Include="bower_components\jquery-slimscroll\" />
+    <Folder Include="bower_components\jquery-sparkline\" />
+    <Folder Include="bower_components\jquery-ui\" />
+    <Folder Include="bower_components\PACE\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadataStorage Include="Service References\G11CollaborationService\" />
+    <WCFMetadataStorage Include="Service References\G11EISMWAuditTrialService\" />
+    <WCFMetadataStorage Include="Service References\G11EISMWSelectionService\" />
+    <WCFMetadataStorage Include="Service References\GSG11EISMWAdminService\" />
+    <WCFMetadataStorage Include="Service References\GSMRTSListService\" />
+    <WCFMetadataStorage Include="Service References\GSXMLASBusinessServices\" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>53948</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44343/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
